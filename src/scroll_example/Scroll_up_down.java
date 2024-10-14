@@ -10,7 +10,7 @@ public class Scroll_up_down {
 
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://www.facebook.com/");
+		driver.get("https://aaplesarkar.mahaonline.gov.in/en");
 		Thread.sleep(3000);
 		
 		// for scroll down we have to use js bcz selenium do not provide for scroll

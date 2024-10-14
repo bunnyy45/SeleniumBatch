@@ -1,7 +1,9 @@
 package basiccommand;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -12,26 +14,37 @@ public class Alert_exm {
 		/*
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("");  //demoqa.com/alert website link
+		driver.get("https://demoqa.com/alerts");  
 		Thread.sleep(3000);
-		driver.findElement(by);     // inspect for confirmbutton and perform action click
+		driver.findElement(By.xpath("//button[@id='alertButton']")).click();
 		Thread.sleep(3000);
 		Alert alr=driver.switchTo().alert();
-		alr.dismiss();    // to click on cancel button when alert come
+		alr.accept();    // to click on cancel button when alert come
+		Thread.sleep(3000);
+		driver.close();
 		*/
 		
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("");
+		driver.get("https://demoqa.com/alerts");
 		Thread.sleep(3000);
-		driver.findElement(by.);
+	    driver.findElement(By.xpath("//button[@id='promtButton']")).click();
 		Thread.sleep(3000);
-		Alert alert=driver.switchTo().alert();
+		Alert promptalert=driver.switchTo().alert();
 		
-		Actions act=new Actions(driver);
-		act.sendKeys(args);
+		promptalert.sendKeys("send keys hi");
+		Thread.sleep(3000);
+		promptalert.accept();
+		driver.close();
 		
+
+	
 
 	}
 
 }
+
+
+
+
+

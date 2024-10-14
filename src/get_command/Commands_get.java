@@ -9,11 +9,12 @@ public class Commands_get {
 
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("opensource-demo.orangehrmlive.com");
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		
 		System.out.println(driver.getTitle());
 		System.out.println(driver.getWindowHandle());
 		System.out.println(driver.getCurrentUrl());
+		System.out.println(driver.getPageSource());
 
 		
 		
